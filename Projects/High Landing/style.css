@@ -12,6 +12,11 @@ body {
   display: flex;
   justify-content: space-between;
   margin: 30px 30px 0px 30px;
+  position: sticky;
+  top: 0;
+  background-color: #e2e2e2;
+  z-index: 100;
+  padding: 15px;
 }
 
 #navbar #menu {
@@ -68,7 +73,7 @@ body {
   margin: 30px;
   display: flex;
   justify-content: space-between;
-  margin-bottom: 50px;
+  margin-bottom: 150px;
 }
 
 #home_section #home_content {
@@ -316,6 +321,7 @@ body {
   flex-direction: column;
   justify-content: space-between;
   border-radius: 15px;
+  margin-bottom: 15px;
   /* display: grid; */
 }
 
@@ -431,75 +437,75 @@ body {
 }
 
 .faq-container {
-    max-width: 600px;
-    margin: 0 auto;
-  }
-  
-  .faq {
-    background-color: transparent;
-    border: 1px solid #9fa4a8;
-    border-radius: 10px;
-    margin: 20px 0;
-    padding: 30px;
-    position: relative;
-    overflow: hidden;
-    transition: 0.3s ease;
-  }
-  
-  .faq.active {
-    background-color: #fff;
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1), 0 3px 6px rgba(0, 0, 0, 0.1);
-  }
-  
-  .faq.active::before,
-  .faq.active::after {
-    content: '\f075';
-    font-family: 'Font Awesome 5 Free';
-    color: #2ecc71;
-    font-size: 7rem;
-    position: absolute;
-    opacity: 0.2;
-    top: 20px;
-    left: 20px;
-    z-index: 0;
-  }
-  
-  .faq.active::before {
-    color: #3498db;
-    top: -10px;
-    left: -30px;
-    transform: rotateY(180deg);
-  }
-  
-  .faq-title {
-    margin: 0 35px 0 0;
-  }
-  
-  .faq-text {
-    display: none;
-    margin: 30px 0 0;
-  }
-  
-  .faq.active .faq-text {
-    display: block;
-  }
-  
-  .faq-toggle {
-    background-color: transparent;
-    border: 0;
-    border-radius: 50%;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 16px;
-    padding: 0;
-    position: absolute;
-    top: 30px;
-    right: 30px;
-    height: 30px;
-    width: 30px;
-  }
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.faq {
+  background-color: transparent;
+  border: 1px solid #9fa4a8;
+  border-radius: 10px;
+  margin: 20px 0;
+  padding: 30px;
+  position: relative;
+  overflow: hidden;
+  transition: 0.3s ease;
+}
+
+.faq.active {
+  background-color: #fff;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1), 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+.faq.active::before,
+.faq.active::after {
+  content: "\f075";
+  font-family: "Font Awesome 5 Free";
+  color: #2ecc71;
+  font-size: 7rem;
+  position: absolute;
+  opacity: 0.2;
+  top: 20px;
+  left: 20px;
+  z-index: 0;
+}
+
+.faq.active::before {
+  color: #3498db;
+  top: -10px;
+  left: -30px;
+  transform: rotateY(180deg);
+}
+
+.faq-title {
+  margin: 0 35px 0 0;
+}
+
+.faq-text {
+  display: none;
+  margin: 30px 0 0;
+}
+
+.faq.active .faq-text {
+  display: block;
+}
+
+.faq-toggle {
+  background-color: transparent;
+  border: 0;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  padding: 0;
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  height: 30px;
+  width: 30px;
+}
 
 /* Footer Section  */
 
@@ -522,27 +528,27 @@ body {
 
 #footer_input {
   display: flex;
-  border: 1px solid #fff;
   width: fit-content;
   flex-wrap: wrap;
 }
 
 #footer_input button {
-    border: none;
-    width: 80px;
-    background-color: black;
-    color: white;
-    height: 35px;
-    text-align: center;
-    font-size: 15px;
-  }
-  
-  #footer_input input {
-    border: none;
-    width: 220px;
-    height: 35px;
-    padding: 20px;
-  }
+  border: none;
+  width: 80px;
+  background-color: black;
+  color: white;
+  height: 35px;
+  text-align: center;
+  font-size: 15px;
+  border: 1px solid #fff;
+}
+
+#footer_input input {
+  border: none;
+  width: 220px;
+  height: 35px;
+  padding: 20px;
+}
 
 #footer_email_container {
   width: 50%;
@@ -584,9 +590,12 @@ body {
 #footer_links_container {
 }
 
-
-
 /* Responsive Designs  */
+@media screen and (max-width: 925px) {
+  #pricing_section_lower {
+    justify-content: center;
+  }
+}
 
 @media screen and (max-width: 768px) {
   #navbar {
@@ -600,28 +609,189 @@ body {
     width: 100%;
   }
 
+  #pricing_section_lower .pricing_section_lower_cards {
+    margin-bottom: 15px;
+  }
 }
 
-
-
-@media screen and (max-width: 585px) {
+/* @media screen and (max-width: 585px) {
     #navbar #menu ul {
         flex-direction: column;
       }
+} */
+
+@media only screen and (max-width: 585px) {
+  #navbar #menu ul {
+    flex-direction: column;
+  }
+
+  #navbar #menu ul > li {
+    display: none;
+  }
+
+  .menu-toggle {
+    display: block;
+    font-size: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+
+  #home_section {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  #home_heading {
+    text-align: center;
+  }
+
+  #home_section #home_pic {
+    display: none;
+  }
+
+  #home_content img {
+    width: 100%;
+  }
+
+  #about_us_section {
+    flex-direction: column-reverse;
+  }
+
+  #how_it_works_section {
+    flex-direction: column;
+  }
+
+  #how_it_works_content #how_it_works_heading p {
+    font-size: 40px;
+  }
+
+  #pricing_section #pricing_section_upper {
+    justify-content: center;
+    flex-direction: column-reverse;
+  }
+
+  #pricing_section_upper_heading p {
+    font-size: 40px;
+  }
+
+  #pricing_section #pricing_section_lower {
+    justify-content: center;
+  }
+
+  #pricing_section_lower .pricing_section_lower_cards {
+    margin-bottom: 15px;
+  }
+
+  #faq_section {
+    flex-direction: column;
+  }
+
+  #faq_heading p {
+    font-size: 40px;
+  }
+
+  #footer_container {
+    flex-direction: column;
+    margin-bottom: 35px;
+  }
+
+  #footer_category_container {
+    margin-top: 50px;
+    flex-direction: column-reverse;
+  }
+
+  #footer_email_container {
+    width: 100%;
+  }
+
+  #footer_section_footer #footer_links_container img {
+    width: 100%;
+  }
+
+  .footer_category_container_content {
+    margin-bottom: 30px;
+    margin-left: 0;
+  }
 }
 
+@media only screen and (max-width: 390px) {
+  #home_heading p {
+    font-size: 40px;
+  }
 
+  #about_us_heading p {
+    font-size: 40px;
+  }
 
-@media only screen and (max-width: 480px) {
-    #navbar #menu ul>li {
-        display: none;
-    }
+  #how_it_works_section
+    #how_it_works_content
+    #how_it_works_bullets
+    .how_it_works_bullets_cont {
+    margin: 0;
+  }
 
-    .menu-toggle {
-        display: block;
-        font-size: 24px;
-        background: none;
-        border: none;
-        cursor: pointer;
-    }
+  #pricing_section_lower .pricing_section_lower_cards {
+    width: 200px;
+  }
+
+  #pricing_section_lower
+    .pricing_section_lower_cards
+    .pricing_section_lower_btn {
+    width: 150px;
+  }
+
+  #pricing_section_lower .pricing_section_lower_cards .pricing {
+    flex-direction: column;
+  }
+
+  #pricing_section_lower .pricing_section_lower_cards .pricing .price {
+    font-size: 50px;
+  }
+
+  #home_section #home_content #home_email #email_field {
+    width: 220px;
+  }
+}
+
+@media only screen and (max-width: 390px) {
+  #home_section #home_content #home_email #email_field {
+    width: 150px;
+  }
+
+  #footer_input input {
+    width: 150px;
+  }
+
+  #footer_email_container p {
+    font-size: 30px;
+  }
+
+  #faq_heading p {
+    font-size: 30px;
+  }
+
+  #how_it_works_content #how_it_works_heading p {
+    font-size: 25px;
+  }
+
+  #how_it_works_section #how_it_works_btn {
+    width: 120px;
+  }
+
+  #pricing_section_upper_heading p {
+    font-size: 30px;
+  }
+
+  #how_it_works_section
+    #how_it_works_content
+    #how_it_works_bullets
+    .how_it_works_bullets_cont {
+    display: block;
+    margin-bottom: 55px;
+  }
+
+  .footer_category_container_content :first-child > :nth-child(2) {
+    font-size: 10px;
+  }
 }
